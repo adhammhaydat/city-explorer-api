@@ -13,9 +13,6 @@ const moveController=require('./controllers/move.control')
 server.get('/', (req, res) => {
   res.send('hello adham')
 })
-server.get('/weather', (req, res) => {
-  res.send(weather)
-});
 
 server.listen(PORT || 3001, () => {
   console.log(`server is runiing in port ${PORT}`)

@@ -1,8 +1,9 @@
 'use strict';
 const Forecast=require('../model/weather.model')
+const axios = require('axios')
 const weatherControler= (req, response) => {
 
-  let url = `https://api.weatherbit.io/v2.0/forecast/daily/?key=574ce3e321f542a8aca3544a43bbfc2f&lat=${req.params.lat}&lon=${req.params.lon}`
+  let url = `https://api.weatherbit.io/v2.0/forecast/daily/?key=${process.env.WEATHER_API_KEY}&lat=${req.params.lat}&lon=${req.params.lon}`
 
   let newWeather = []
   axios.get(url).then(weatherData => {
