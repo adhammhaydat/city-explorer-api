@@ -7,7 +7,7 @@ const weatherControler= (req, response) => {
 
   let newWeather = []
   axios.get(url).then(weatherData => {
-    weatherData.data.data.forEach((day)=> newWeather.push(new Forecast(day)));
+    weatherData.data.data.map((day)=> newWeather.push(new Forecast(day)));
    
     response.send(newWeather);
 

@@ -4,10 +4,8 @@ const server = express() // initialize your express app instance
 const cors = require('cors'); // after you initialize your express app instance
 require('dotenv').config();
 const PORT = process.env.PORT;
-const axios = require('axios');
-const weather = require('./data/weather.json');
 server.use(cors());
-const weatherControler=require('./controllers/move.control')
+const weatherControler=require('./controllers/weather.control')
 const moveController=require('./controllers/move.control')
 // a server endpoint
 server.get('/', (req, res) => {
